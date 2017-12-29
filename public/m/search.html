@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link type="image/x-icon" rel="shortcut icon" href="images/favicon.ico">
+
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet/less" href="./less/search.less">
+    <script src="./lib/less/less.js"></script>
+
+    <title>乐淘搜索</title>
+</head>
+<body>
+    <header id="header">
+        <a class="fa-arrow-left" href="#"></a>
+        <h4>乐淘搜索</h4>
+    </header>
+
+    <main id="main" class="mui-scroll-wrapper">
+        <div class="mui-scroll">
+            <form>
+                <input type="search" placeholder="请输入要搜索的商品">
+                <button type="button" class="mui-btn mui-btn-primary">搜索</button>
+            </form>
+            <div class="searchHistory mui-clearfix">
+                <span>搜索历史</span>
+                <a href="#" class="fa-trash btn-clear">清空记录</a>
+            </div>
+            <ul class="mui-table-view">
+            </ul>
+        </div>
+    </main>
+
+
+    <footer id="footer">
+        <div class="mui-row">
+            <div class="mui-col-xs-3">
+                <a href="./index.html" class="fa fa-home active">首页</a>
+            </div>
+            <div class="mui-col-xs-3">
+                <a href="./category.html" class="fa fa-bars">分类</a>
+            </div>
+            <div class="mui-col-xs-3">
+                <a href="#" class="fa fa-shopping-cart">购物车</a>
+            </div>
+            <div class="mui-col-xs-3">
+                <a href="#" class="fa fa-user">个人中心</a>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script type="text/html" id="searchHistoryTem">
+        {{each rows as value}}
+            <li class="mui-table-view-cell">{{value}}<i class="fa-close btn-delete" data-content="{{value}}"></i></li>
+        {{/each}}
+    </script>
+
+    <script src="./lib/zepto/zepto.js"></script>
+    <script src="./lib/mui/js/mui.js"></script>
+    <script src="./lib/artTemplate/template.js"></script>
+    <script src="./js/search.js"></script>
+</body>
+</html>

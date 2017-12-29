@@ -1,0 +1,122 @@
+@import './base.less';
+// 主体样式
+
+
+//轮播图
+#slide {
+    .mui-slider-indicator {
+        bottom: 20px;
+    }
+}
+
+//nav标题
+#nav {
+    padding-left: 10px;
+    padding-right: 10px;
+    >.mui-row {
+        >div {
+            a {
+                display: block;
+                img {
+                    width: 100px;
+                    height: 94px;
+                }
+            }
+        }
+    }
+}
+
+//adv广告区
+#adv {
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-top: 1px solid #ccc;
+    >.mui-row {
+        .adv-left {
+            a {
+                display: block;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        .adv-right {
+            >a {
+                display: block;
+                >img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+//品牌专区
+#brand {
+    margin-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    .title {
+        display: block;
+        width: 100%;
+    }
+
+    >.mui-row {
+        >div {
+            >a {
+                display: block;
+                >img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+#sport,#lady,#man {
+    margin-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    .title {
+        display: block;
+        width: 100%;
+    }
+
+    >.mui-row {
+        text-align: center;
+        >div {
+            margin-top: 10px;
+            padding: 0 5px;
+            background-color: #fff;
+            >.product {
+                padding-bottom: 10px;
+                box-shadow: 0 0 5px #ccc;
+                >img {
+                display: block;
+                width: 100%;
+                }
+                .name {
+                    color: #000;
+                    margin-bottom: 0;
+                }
+                .price {
+                    font-size: 12px;
+                    padding-top: 2px;
+                    padding-bottom: 2px;
+                    >span {
+                        color: red;
+                    }
+                    >del {
+                        color: #ccc;
+                    }
+                }
+                .buy {
+                    border: none;
+                    background-color: #007aff;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,49 @@
+@import './base.less';
+
+
+
+//左边样式
+#category-left {
+    >ul {
+        float: left;
+        padding: 0;
+        margin: 0;
+        width: 80px;
+        >li {
+            border-right: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            line-height: 45px;
+            text-align: center;
+            font-size: 14px;
+
+            &.active {
+                background-color: #ccc; 
+            }
+        }
+    }
+}
+
+// 右边样式
+#category-right {
+    left: 80px;
+    top: 45px;
+    padding: 10px;
+    width: auto;
+    >div {
+        position: relative;
+        .mui-row {
+            width: 100%;
+            background-color: #eee;
+            >div {
+                padding: 5px;
+                text-align: center;
+                >a {
+                    display: block;
+                    >img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
