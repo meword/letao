@@ -1,0 +1,170 @@
+/* 在主页less文件里面导入base.less公共样式 */
+/* base.less是用来写一些项目都需要的公共样式 */
+/* 定义乐淘主题色 */
+img {
+  /* 解决图片3px的间隙 */
+  vertical-align: middle;
+}
+/* 头部区域的公共样式 */
+#header {
+  height: 45px;
+  background-color: #006699;
+  color: #fff;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+#header > h4 {
+  line-height: 45px;
+  font-weight: normal;
+  margin: 0;
+}
+#header .fa-search {
+  color: #fff;
+  position: absolute;
+  top: 14px;
+  right: 20px;
+}
+/* 底部的公共样式 */
+#footer {
+  position: fixed;
+  width: 100%;
+  left: 0px;
+  bottom: 0px;
+  height: 50px;
+  background-color: #006699;
+  z-index: 999;
+}
+#footer .mui-row > div > a {
+  color: #fff;
+  font-size: 14px;
+  display: block;
+  text-align: center;
+  padding: 11px;
+}
+#footer .mui-row > div > a::before {
+  display: block;
+}
+#footer .mui-row > div > a.active {
+  color: orange;
+}
+html,
+body {
+  height: 100%;
+}
+/* 主体内容的公共样式 */
+#main {
+  padding-top: 45px;
+  padding-bottom: 50px;
+  height: 100%;
+  background-color: #fff;
+}
+/* 导航区域 */
+#nav {
+  padding: 10px;
+}
+#nav .mui-row > div > a {
+  display: block;
+}
+#nav .mui-row > div > a > img {
+  width: 100px;
+  height: 94px;
+}
+/* 广告区域 */
+#adv {
+  padding-left: 10px;
+  padding-right: 10px;
+  border-top: 1px solid #ccc;
+}
+#adv > .mui-row .adv-left > .mui-row > div > a {
+  display: block;
+}
+#adv > .mui-row .adv-left > .mui-row > div > a > img {
+  width: 100%;
+}
+#adv > .mui-row .adv-right > a {
+  display: block;
+}
+#adv > .mui-row .adv-right > a > img {
+  width: 100%;
+}
+/* 品牌专区 */
+#brand {
+  padding: 0 10px;
+}
+#brand .title {
+  display: block;
+}
+#brand .title > img {
+  width: 100%;
+}
+#brand .mui-row > div > a {
+  display: block;
+}
+#brand .mui-row > div > a > img {
+  width: 100%;
+}
+/* 运动专区  女士专区 男士专区*/
+#sport,
+#women,
+#man {
+  padding: 0 10px;
+}
+#sport .title,
+#women .title,
+#man .title {
+  display: block;
+}
+#sport .title > img,
+#women .title > img,
+#man .title > img {
+  width: 100%;
+}
+#sport .mui-row > div,
+#women .mui-row > div,
+#man .mui-row > div {
+  padding: 0 5px;
+}
+#sport .mui-row > div .product,
+#women .mui-row > div .product,
+#man .mui-row > div .product {
+  box-shadow: 0px 0px 5px #ccc;
+  text-align: center;
+  padding-bottom: 10px;
+  margin-top: 10px;
+}
+#sport .mui-row > div .product .product-img,
+#women .mui-row > div .product .product-img,
+#man .mui-row > div .product .product-img {
+  display: block;
+}
+#sport .mui-row > div .product .product-img > img,
+#women .mui-row > div .product .product-img > img,
+#man .mui-row > div .product .product-img > img {
+  width: 100%;
+}
+#sport .mui-row > div .product .product-name,
+#women .mui-row > div .product .product-name,
+#man .mui-row > div .product .product-name {
+  font-size: 14px;
+  height: 28px;
+  line-height: 14px;
+  /* 只显示2行文字超出的隐藏 */
+  overflow: hidden;
+}
+#sport .mui-row > div .product .product-price,
+#women .mui-row > div .product .product-price,
+#man .mui-row > div .product .product-price {
+  font-size: 12px;
+}
+#sport .mui-row > div .product .product-price > span,
+#women .mui-row > div .product .product-price > span,
+#man .mui-row > div .product .product-price > span {
+  color: #f40;
+}
+#sport .mui-row > div .product .product-price > del,
+#women .mui-row > div .product .product-price > del,
+#man .mui-row > div .product .product-price > del {
+  color: #ccc;
+}

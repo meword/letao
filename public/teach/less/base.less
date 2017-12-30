@@ -8,17 +8,21 @@ img {
     /* 解决图片3px的间隙 */
     vertical-align: middle;
 }
-*{
-	margin: 0px;
-	padding: 0px;
+
+* {
+    margin: 0px;
+    padding: 0px;
 }
-li{
-	/* 去掉小圆点 */
-	list-style: none;
+
+li {
+    /* 去掉小圆点 */
+    list-style: none;
 }
-a{
-	color:#666;
+
+a {
+    color: #666;
 }
+
 
 /* 头部区域的公共样式 */
 
@@ -41,24 +45,24 @@ a{
         top: 14px;
         right: 10px;
     }
-    .fa-arrow-left{
-    	position: absolute;
-    	left: 10px;
-    	top: 14px;
-    	color:#fff;
+    .fa-arrow-left {
+        position: absolute;
+        left: 10px;
+        top: 14px;
+        color: #fff;
     }
-    form{
-    	padding-left: 35px;
-    	padding-right: 35px;
-    	>input{
-    		width: 100%;
-    		background-color: #fff;
-    		height: 30px;
-    		margin-top: 7px;
-    		font-size: 14px;
-    		text-align: left;
-    		color:#000;
-    	}
+    form {
+        padding-left: 35px;
+        padding-right: 35px;
+        >input {
+            width: 100%;
+            background-color: #fff;
+            height: 30px;
+            margin-top: 7px;
+            font-size: 14px;
+            text-align: left;
+            color: #000;
+        }
     }
 }
 
@@ -109,11 +113,77 @@ body {
 
 
 /* 字体图标的公共样式 */
+
+
 /* 属性选择器 选中类名以fa-开头的类名 和 中间包含空格fa-类名的标签 */
-[class^="fa-"],[class*=" fa-"] {
+
+[class^="fa-"],
+[class*=" fa-"] {
     display: inline-block;
     font: normal normal normal 14px/1 FontAwesome;
     font-size: inherit;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
+}
+
+
+/* 搜索表单公共样式 */
+
+.search-form {
+    padding: 10px;
+    position: relative;
+    padding-right: 70px;
+    >input {
+        height: 30px;
+        background-color: #fff;
+        color: #000;
+        border: 1px solid @main-color;
+        text-align: left;
+        margin-bottom: 0px;
+        border-radius: 5px 0px 0px 5px;
+        font-size: 14px;
+    }
+    >button {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        width: 60px;
+        height: 30px;
+        background-color: @main-color;
+        border-color: @main-color;
+        border-radius: 0px 5px 5px 0px;
+    }
+}
+
+
+/* 商品列表的公共样式 */
+
+.product {
+    box-shadow: 0px 0px 5px #ccc;
+    text-align: center;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    .product-img {
+        display: block;
+        >img {
+            width: 100%;
+        }
+    }
+    .product-name {
+        font-size: 14px;
+        height: 28px;
+        line-height: 14px;
+        /* 只显示2行文字超出的隐藏 */
+        overflow: hidden;
+    }
+    .product-price {
+        font-size: 12px;
+        >span {
+            color: #f40;
+        }
+        >del {
+            color: #ccc;
+        }
+    }
+    .product-buy {}
 }

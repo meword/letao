@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+</head>
+
+<body>
+    <div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+        <div class="mui-scroll">
+            <ul class="mui-table-view mui-table-view-chevron">
+                <li>这是1个li</li>
+                <li>这是2个li</li>
+                <li>这是3个li</li>
+                <li>这是4个li</li>
+                <li>这是5个li</li>
+                <li>这是6个li</li>
+                <li>这是7个li</li>
+                <li>这是8个li</li>
+                <li>这是9个li</li>
+                <li>这是10个li</li>
+                <li>这是11个li</li>
+                <li>这是12个li</li>
+                <li>这是13个li</li>
+                <li>这是14个li</li>
+                <li>这是15个li</li>
+                <li>这是16个li</li>
+                <li>这是17个li</li>
+                <li>这是18个li</li>
+                <li>这是19个li</li>
+                <li>这是20个li</li>
+                <li>这是21个li</li>
+                <li>这是22个li</li>
+                <li>这是23个li</li>
+                <li>这是24个li</li>
+                <li>这是25个li</li>
+                <li>这是26个li</li>
+                <li>这是27个li</li>
+                <li>这是28个li</li>
+                <li>这是29个li</li>
+                <li>这是30个li</li>
+                <li>这是31个li</li>
+                <li>这是32个li</li>
+                <li>这是33个li</li>
+                <li>这是34个li</li>
+                <li>这是35个li</li>
+                <li>这是36个li</li>
+                <li>这是37个li</li>
+                <li>这是38个li</li>
+                <li>这是39个li</li>
+                <li>这是40个li</li>
+                <li>这是41个li</li>
+                <li>这是42个li</li>
+                <li>这是43个li</li>
+                <li>这是44个li</li>
+                <li>这是45个li</li>
+                <li>这是46个li</li>
+                <li>这是47个li</li>
+                <li>这是48个li</li>
+                <li>这是49个li</li>
+                <li>这是50个li</li>
+            </ul>
+        </div>
+    </div>
+    <script src="lib/mui/js/mui.js"></script>
+    <script>
+    mui.init({
+        pullRefresh: {
+            container: '#pullrefresh',
+            down: {
+                contentnomore: '没有更多数据了',
+                callback: pulldownRefresh
+            },
+            up: {
+                contentrefresh: '正在加载...',
+                callback: pullupRefresh
+            }
+        }
+    });
+    /**
+     * 下拉刷新具体业务实现
+     */
+    function pulldownRefresh() {
+        // console.log('正在下拉刷新');
+        //延迟1秒关闭下拉刷新效果
+        setTimeout(function() {
+            // console.log('数据请求完毕');
+            // 关闭下拉刷新效果
+            // mui(...).pullRefresh(...).endPulldown is not a function mui官方文档里面的结束下拉刷新是之前版本的使用方式 和我们当前mui使用不一样
+            // mui('#pullrefresh').pullRefresh().endPulldown();
+            // mui demo文档的结束下拉刷新的方法
+            mui('#pullrefresh').pullRefresh().endPulldownToRefresh();
+        }, 1000)
+    }
+    var count = 0;
+    /**
+     * 上拉加载具体业务实现
+     */
+    function pullupRefresh() {
+        setTimeout(function() {
+            // console.log('数据请求完毕');
+            // 关闭下拉刷新效果
+            // mui(...).pullRefresh(...).endPulldown is not a function mui官方文档里面的结束下拉刷新是之前版本的使用方式 和我们当前mui使用不一样
+            // mui('#pullrefresh').pullRefresh().endPulldown();
+            // mui demo文档的结束下拉刷新的方法
+            mui('#pullrefresh').pullRefresh().endPullupToRefresh(); 
+        }, 1000)
+    }
+    </script>
+</body>
+
+</html>

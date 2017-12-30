@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    用户名: <span></span>
+    <script>
+    //获取url中的参数并且解决中文乱码问题
+     function getQueryString(key){
+        var reg = new RegExp("(^|&)"+key+"=([^&]*)(&|$)");
+        var result = window.location.search.substr(1).match(reg);
+        return result?decodeURIComponent(result[2]):null;
+      }
+    // 调用获取url的方法传入键
+    var username = getQueryString('username');
+    var span = document.querySelector('span');
+    span.innerHTML = username;
+    </script>
+</body>
+
+</html>

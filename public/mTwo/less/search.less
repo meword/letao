@@ -4,58 +4,35 @@
 
 // 主体部分
 #main {
-    >div {
-        >form {
-            position: relative;
-            padding: 10px;
-            >input {
-                margin: 0;
-                height: 30px;
-                border: 1px solid @main-color;
-                background-color: #fff;
-                text-align: left;
+    .tool {
+        padding: 10px;
+        font-size: 14px;
+        >span {
+            float: left;
+        }
+        >a {
+            float: right;
+        }
+    }
+
+    .history {
+        >ul {
+            padding: 0 10px;
+
+            &::before,&::after {
+                display: none;
+            }
+            >li {
+                margin-top: -1px;
                 font-size: 14px;
-            }
-            >button {
-                position: absolute;
-                right: 10px;
-                top: 10px;
-                height: 30px;
-                background-color: @main-color;
-                border-color: @main-color;
-            }
-        }
-
-        >.tool {
-            padding: 10px;
-            font-size: 14px;
-            >span {
-                float: left;
-            }
-            >a {
-                float: right;
-            }
-        }
-
-        >.history {
-            >ul {
-                padding: 0 10px;
-
-                &::before,&::after {
-                    display: none;
+                border: 1px solid #ccc;
+                >i {
+                    margin-top: 3px;
+                    float: right;
                 }
-                >li {
-                    margin-top: -1px;
-                    font-size: 14px;
-                    border: 1px solid #ccc;
-                    >i {
-                        margin-top: 3px;
-                        float: right;
-                    }
 
-                    &::after {
-                        display: none;
-                    }
+                &::after {
+                    display: none;
                 }
             }
         }

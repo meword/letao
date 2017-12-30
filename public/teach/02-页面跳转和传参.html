@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	用户名：<input type="text">
+	<button>登录</button>
+	<script>
+		var button = document.querySelector('button');
+		button.addEventListener('click', function () {
+			var username = document.querySelector('input').value;
+			// JS里面跳转页面 同时把用户跟在url的参数后面
+			window.location.href="03-主页.html?username="+username;
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+@import './base.less';
+
+
+#main {
+    .mui-content {
+        position: relative;
+        height: 100%;
+    }
+    .mui-scroll {
+        >.product {
+            >.product-title {
+                >.mui-row {
+                    padding: 5px;
+                    background: #efeff4;
+                    >div {
+                        &.active {
+                            >a {
+                                color: orange;
+                            }
+                        }
+                    
+                        >a {
+                            display: block;
+                            font-size: 12px;
+                            text-align: center;
+
+                            &::before {
+                                float: right;
+                            }
+                        }
+                    }
+                }
+
+            }
+            >.product-list {
+                >.mui-row {
+                    >div {
+                        padding: 5px;
+                        text-align: center;
+                        >.commodity {
+                            padding: 10px;
+                            box-shadow: 0 0 10px #ccc;
+                            background-color: #fff;
+                            .header {
+                                display: block;
+                                >img {
+                                    width: 100%;
+                                }
+                                >.title {
+                                    overflow: hidden;
+                                    line-height: 18px;
+                                    height: 36px;
+                                }
+                            }
+    
+                            .price {
+                                >span {
+                                    font-size: 14px;
+                                    color: #f40;
+                                }
+                                >del {
+                                    font-size: 12px;
+                                    color: #ccc;
+                                }
+                            }
+                            >.buy {
+                                margin-top: 10px;
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

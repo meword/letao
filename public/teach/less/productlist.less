@@ -1,0 +1,44 @@
+@import 'base.less';
+
+/* 商品列表的主体 */
+
+#main {
+    .mui-scroll-wrapper{
+        /* 让父容器相对定位防止跑到头部固定定位底下 */
+        position: relative;
+        /* 设置高度  因为mui-scroll是绝对定位 撑不开父元素的高度  设置高度和main内容一样高*/
+        height: 100%;
+    }
+    .productlist {
+        .productlist-title {
+            .mui-row {
+                >div {
+                    >a {
+                        display: block;
+                        font-size: 14px;
+                        text-align: center;
+                        background-color: #ccc;
+                        padding: 5px 0;
+                        >i {
+                            font-weight: bold;
+                            font-size: 16px;
+                        }
+                    }
+                    &.active {
+                        /* 注意字体颜色选中a添加不然a有默认字体不会继承 */
+                        >a {
+                            color: #f40;
+                        }
+                    }
+                }
+            }
+        }
+        .productlist-content {
+            .mui-row {
+                >div {
+                    padding: 0 5px;
+                }
+            }
+        }
+    }
+}

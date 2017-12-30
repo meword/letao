@@ -1,0 +1,93 @@
+@import 'base.less';
+
+/* 商品详情主体 */
+
+#main {
+    .mui-scroll-wrapper {
+        position: relative;
+        height: 100%;
+    }
+    .product-detail {
+        .product-name {
+            padding: 10px;
+            font-size: 16px;
+            border-bottom: 1px solid #ccc;
+        }
+        .product-price {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+            >strong {
+                font-size: 20px;
+                color: #f40;
+            }
+            >del {
+                color: #ccc;
+                font-size: 14px;
+            }
+        }
+        .product-size {
+            border-bottom: 1px solid #ccc;
+            padding: 10px;
+            line-height: 40px;
+            .btn-size {
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                border: 1px solid #ccc;
+                display: inline-block;
+                font-size: 14px;
+            }
+        }
+        .product-num {
+            border-bottom: 1px solid #ccc;
+            padding: 10px;
+            .product-num-options {
+                font-size: 0px;
+                display: inline-block;
+                .btn-reduce,
+                .btn-add {
+                    width: 30px;
+                    height: 30px;
+                    line-height: 30px;
+                    text-align: center;
+                    border: 1px solid #ccc;
+                    display: inline-block;
+                    font-size: 14px;
+                }
+                .count {
+                    width: 30px;
+                    height: 30px;
+                    line-height: 30px;
+                    text-align: center;
+                    border: 1px solid #ccc;
+                    display: inline-block;
+                    font-size: 14px;
+                    transform: translateY(-1px);
+                    /* 注意input是有padding 30px不够用 看到里面内容 */
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
+
+
+/* 详情页面单独使用加入购物车和购买的底部 */
+
+#footer {
+    background-color: #ccc;
+    padding: 10px;
+    .fa-shopping-cart {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+    }
+    .btn-cart {
+        float: right;
+        margin-right: 10px;
+    }
+    .btn-buy {
+        float: right;
+    }
+}

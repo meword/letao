@@ -4,6 +4,7 @@ $(function() {
     scroll();
     leftCategoryClick();
     getRightCategoryData();
+
 });
 
 
@@ -64,4 +65,6 @@ function getRightCategoryData(id) {
             }
         }
     })
-}   
+};
+
+

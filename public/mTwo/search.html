@@ -22,7 +22,7 @@
     <!-- 主体 -->
     <main id="main" class="mui-scroll-wrapper">
         <div class="mui-scroll">
-            <form>
+            <form class="form">
                 <input type="search" placeholder="请输入要搜索的商品">
                 <button class="mui-btn mui-btn-primary btn-search" type="button">搜索</button>
             </form>
@@ -32,6 +32,7 @@
             </div>
             <div class="history">
                 <ul class="mui-table-view">
+
                 </ul>
             </div>
         </div>
@@ -57,7 +58,7 @@
 
     <script type="text/html" id="searchHistoryTmp">
         {{each rows as value}}
-            <li class="mui-table-view-cell">{{value}}<i class="fa-close btn-delete" data-content = "{{value}}"></i></li>
+            <li class="mui-table-view-cell" data-search="{{value}}">{{value}}<i class="fa-close btn-delete" data-content = "{{value}}"></i></li>
         {{/each}}
     </script>
 

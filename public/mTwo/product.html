@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet/less" href="./less/product.less">
+    <script src="./lib/less/less.js"></script>
+    <title>乐淘云购二搜索中心</title>
+</head>
+<body>
+
+    <!-- 头部 -->
+    <header id="header">
+        <a href="#" class="fa-arrow-left"></a>
+        <h4>搜索中心</h4>
+    </header>
+
+    <!-- 主体 -->
+    <main id="main">
+        <div class="mui-content mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <form class="form">
+                    <input type="search" placeholder="请输入要搜索的商品">
+                    <button class="mui-btn mui-btn-primary btn-search" type="button">搜索</button>
+                </form>
+                <div class="product">
+                    <div class="product-title">
+                        <div class="mui-row">
+                            <div class="mui-col-xs-3 active" data-icon="1" data-name="time">
+                                <a href="#">上架时间 <i class="fa-angle-down"></i></a>
+                            </div>
+                            <div class="mui-col-xs-3" data-icon="1" data-name="price">
+                                <a href="#">价格 <i class="fa-angle-down"></i></a>
+                            </div>
+                            <div class="mui-col-xs-3" data-icon="1" data-name="num">
+                                <a href="#">销量 <i class="fa-angle-down"></i></a>
+                            </div>
+                            <div class="mui-col-xs-3" data-icon="1" data-name="discount">
+                                <a href="#">折扣 <i class="fa-angle-down"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-list">
+                        <div class="mui-row">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 底部 -->
+    <footer id="footer">
+        <div class="mui-row">
+            <div class="mui-col-xs-3">
+                <a href="./index.html" class="fa-home">首页</a>
+            </div>
+            <div class="mui-col-xs-3">
+                <a href="./category.html" class="fa-bars">分类</a>
+            </div>
+            <div class="mui-col-xs-3">
+                <a href="#" class="fa-shopping-cart">购物车</a>
+            </div>
+            <div class="mui-col-xs-3">
+                <a href="#" class="fa-user">个人中心</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- 商品列表模板 -->
+    <script type="text/html" id="productListTem">
+        {{each data as value}}
+            <div class="mui-col-xs-6">
+                <div class="commodity">
+                    <a href="#" class="header">
+                    <img class="img" src="./images/detail.jpg" alt="">
+                    <p class="title">{{value.proName}}</p>
+                </a>
+                <div class="price">
+                    <span>{{value.price}}</span>
+                    <del>{{value.oldPrice}}</del>
+                </div>
+                <a href="#" class="buy mui-btn mui-btn-primary">立即购买</a>
+                </div>
+            </div>
+        {{/each}}
+    </script>
+
+    <script src="./lib/zepto/zepto.js"></script>
+    <script src="./lib/mui/js/mui.js"></script>
+    <script src="./lib/artTemplate/template.js"></script>
+    <script src="./js/product.js"></script>
+</body>
+</html>

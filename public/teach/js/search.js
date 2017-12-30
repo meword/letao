@@ -2,7 +2,7 @@
  * @Author: zw
  * @Date:   2017-12-27 15:47:16
  * @Last Modified by:   zw
- * @Last Modified time: 2017-12-27 17:27:15
+ * @Last Modified time: 2017-12-29 16:32:45
  */
 $(function() {
     addHistory();
@@ -48,6 +48,8 @@ function addHistory() {
         }
         // 点完搜索清空输入框
         $('.search-input').val('');
+        // 点击搜索的时候跳转到商品列表页面 同时把参数传递
+        window.location.href="productlist.html?search="+search;
     });
 }
 

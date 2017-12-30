@@ -5,6 +5,7 @@ $(function() {
     onBtnClick();
     removeOne();
     removeAll();
+    searchHistoryClick();
 });
 
 
@@ -55,6 +56,8 @@ function onBtnClick () {
         $('#main >div >form >input').val('').focus();
 
         getSearchHistory();
+
+        window.location.href = './product.html?search='+inputValue;
 
     })
 }
@@ -115,5 +118,14 @@ function removeAll() {
 
         getSearchHistory();
 
+    })
+}
+
+
+function searchHistoryClick() {
+    $('#main .history >ul').on('click', 'li', function() {
+        var search = $(this).data('search');
+        
+        window.location.href = './product.html?search='+search;
     })
 }
