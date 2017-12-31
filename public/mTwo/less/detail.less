@@ -1,1 +1,99 @@
 @import './base.less';
+
+
+
+
+//主体样式
+#main {
+    >div {
+        top: 45px;
+    }
+    .slide {
+        >a {
+            display: block;
+            >img {
+                width: 100%;
+            }
+        }
+    }
+    .product-name {
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+        font-size: 16px;
+    }
+    .price {
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+        >strong {
+            color: #f04;
+            font-size: 20px;
+        }
+        >del {
+            color: #ccc;
+            font-size: 14px;
+        }
+        
+    }
+    .size {
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+        >span {
+            display: inline-block;
+            margin-top: 5px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            border: 1px solid #ccc;
+            text-align: center;
+            font-size: 14px;
+
+            &.active {
+                background-color: orange;
+            }
+        }
+    }
+    .num {
+        padding: 10px;
+        >a {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+        .count {
+            margin: 0;
+            padding: 0;
+            transform: translateY(-1px);
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+        }
+    }
+}
+
+
+
+
+// 底部样式
+#footer {
+    background-color: #ccc;
+    padding: 10px;
+    >.fa-shopping-cart {
+        position: absolute;
+        left: 20px;
+        top: 18px;
+    }
+    >.btn-buy,.btn-cart {
+        float: right;
+    }
+    >.btn-buy {
+        margin-left: 10px;
+    }
+}
+
+
+
+

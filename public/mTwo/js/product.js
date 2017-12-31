@@ -17,8 +17,8 @@ $(function () {
     });
 
     product.searchClick();
-
     product.titleClick();
+    product.clickBuy();
 });
 
 
@@ -100,7 +100,7 @@ product.getProductData = function(obj,callBack) {
         url:'/product/queryProduct',
         data:obj,
         success: function(backData) {
-            // console.log(backData);
+            console.log(backData);
             callBack && callBack(backData);
         }
     })
@@ -166,5 +166,14 @@ product.titleClick = function() {
             var data = template('productListTem',backData);
             $('#main .product-list >div').html(data);
         });
+    })
+}
+
+
+// 点击购买
+product.clickBuy = function() {
+    $('#main').on('tap', '.btn-buy', function() {
+        var id = $(this).data('shopid');
+        window.location.href = './detail.html?productid='+id;
     })
 }

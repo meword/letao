@@ -15,31 +15,70 @@
 
     <!-- 头部 -->
     <header id="header">
-        <a href="#" class="fa-arrow-left"></a>
+        <a href="./product.html" class="fa-arrow-left"></a>
         <h4>搜索中心</h4>
     </header>
 
     <!-- 主体 -->
-    <main id="main">
-        
+    <main id="main" class="mui-content mui-scroll-wrapper">
+        <div class="mui-scroll">
+
+        </div>
     </main>
 
     <!-- 底部 -->
     <footer id="footer">
-        <div class="mui-row">
-            <div class="mui-col-xs-2">
-                <a href="#" class="fa-shopping-cart"></a>
-            </div>
-            <div class="mui-col-xs-5">
-                <a href="#" class="mui-btn mui-btn-warning">加入购物车</a>
-            </div>
-            <div class="mui-col-xs-5">
-                <a href="#" class="mui-btn mui-btn-danger">立即购买</a>
-            </div>
-        </div>
+        <a href="#" class="fa-shopping-cart"></a>
+        <a href="#" class="mui-btn mui-btn-danger btn-buy">立即购买</a>
+        <a href="#" class="mui-btn mui-btn-warning btn-cart">加入购物车</a>
     </footer>
 
+    <!-- 定义模板 -->
+    <script type="text/html" id="getDataTem">
+        <div class="mui-slider">
+            <div class="mui-slider-group mui-slider-loop">
 
+
+                <div class="mui-slider-item mui-slider-item-duplicate">
+                    <a href="#">
+                        <img src="" alt="">
+                    </a>
+                </div>
+
+                {{each pic as value}}
+                    <div class="mui-slider-item">
+                        <a href="#">
+                            <img src="{{value.picAddr}}" alt="">
+                        </a>
+                    </div>
+                {{/each}}
+
+                <div class="mui-slider-item mui-slider-item-duplicate">
+                    <a href="#">
+                        <img src="" alt="">
+                    </a>
+                </div>
+
+
+            </div>
+            <div class="mui-slider-indicator">
+                {{each pic}}
+                        <div class="mui-indicator"></div>
+                {{/each}}
+            </div>
+        </div>
+        <div class="product-name">{{proName}}</div>
+        <div class="price">
+            价格：<strong>￥{{price}}</strong><del>￥{{oldPrice}}</del>
+        </div>
+        <div class="size">
+            尺码：
+        </div>
+        <div class="num">
+            数量：<a href="#" class="reduce">-</a><input class="count" type="number" value="1" disabled><a href="#" data-count="{{num}}" class="add">+</a>
+            剩余：{{num}}件
+        </div>
+    </script>
 
     <script src="./lib/zepto/zepto.js"></script>
     <script src="./lib/mui/js/mui.js"></script>
